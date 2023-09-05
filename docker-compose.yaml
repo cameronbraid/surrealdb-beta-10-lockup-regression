@@ -1,0 +1,14 @@
+version: "3"
+services:
+
+  surreal:
+    image: surrealdb/surrealdb:1.0.0-beta.10
+    restart: always
+    ports:
+      - "22773:8000"
+    volumes:
+      - ./data/surreal:/data
+    command: 
+      - start
+      - --log=info
+      - --allow-all=true

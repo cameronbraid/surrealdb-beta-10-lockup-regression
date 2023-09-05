@@ -34,22 +34,4 @@ async fn main() {
 
     println!("{res:?}",);
 
-    surreal
-        .query("UPDATE type::thing($table, $id) content $fields")
-        .bind(("table", "a"))
-        .bind(("id", 1))
-        .bind(("fields", &fields))
-        .await
-        .unwrap()
-        .check()
-        .unwrap();
-
-    let res = surreal
-        .query("select * from a:1")
-        .await
-        .unwrap()
-        .check()
-        .unwrap();
-
-    println!("{res:?}",);
 }

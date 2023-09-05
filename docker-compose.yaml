@@ -12,3 +12,14 @@ services:
       - start
       - --log=info
       - --allow-all=true
+
+  surreal_beta9:
+    image: surrealdb/surrealdb:1.0.0-beta.9
+    restart: always
+    ports:
+      - "22774:8000"
+    command: 
+      - start
+      - --user=root
+      - --pass=root
+      - --log=info

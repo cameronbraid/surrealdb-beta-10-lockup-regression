@@ -1,3 +1,17 @@
+https://github.com/surrealdb/surrealdb/issues/2622
+
+----
+
+This issue was fixed in beta12
+
+```
+git checkout beta12
+cargo run
+```
+
+
+---
+
 Instructions
 
 run 
@@ -18,3 +32,5 @@ cargo run
 
 
 observe expected output
+
+

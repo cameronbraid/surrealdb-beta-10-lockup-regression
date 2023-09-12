@@ -6,6 +6,8 @@ use surrealdb::sql::*;
 #[tokio::main]
 async fn main() {
     let surreal = surrealdb::engine::any::connect(format!("ws://localhost:22773"))
+    // let surreal = surrealdb::engine::any::connect(format!("mem://"))
+    // let surreal = surrealdb::engine::any::connect(format!("file:///tmp/data.db"))
         .await
         .unwrap();
 

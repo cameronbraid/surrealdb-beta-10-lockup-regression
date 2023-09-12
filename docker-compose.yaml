@@ -2,7 +2,7 @@ version: "3"
 services:
 
   surreal:
-    image: surrealdb/surrealdb:1.0.0-beta.10
+    image: surrealdb/surrealdb:1.0.0-beta.12
     restart: always
     ports:
       - "22773:8000"
@@ -11,7 +11,7 @@ services:
     command: 
       - start
       - --log=info
-      - --allow-all=true
+      - --allow-all
 
   surreal_beta9:
     image: surrealdb/surrealdb:1.0.0-beta.9
